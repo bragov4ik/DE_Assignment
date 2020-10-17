@@ -18,15 +18,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    euler_method.cpp \
+    eulermethod.cpp \
     main.cpp \
     mainwindow.cpp \
-    numerical_method.cpp
+    model.cpp \
+    numericalmethod.cpp
 
 HEADERS += \
-    euler_method.h \
+    eulermethod.h \
     mainwindow.h \
-    numerical_method.h
+    model.h \
+    numericalmethod.h
 
 FORMS += \
     mainwindow.ui

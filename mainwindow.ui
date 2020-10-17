@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>946</width>
+    <height>646</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_1">
        <attribute name="title">
@@ -60,6 +60,11 @@
             <height>100</height>
            </size>
           </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
          </widget>
         </item>
         <item row="0" column="2" rowspan="2">
@@ -79,29 +84,61 @@
           </item>
           <item>
            <widget class="QCheckBox" name="checkBox_exact">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
             <property name="text">
              <string>Exact solution</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QCheckBox" name="checkBox_euler">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
             <property name="text">
              <string>Euler's method</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QCheckBox" name="checkBox_improved_euler">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
             <property name="text">
              <string>Improved Euler’s method</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QCheckBox" name="checkBox_runge_kutta">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
             <property name="text">
              <string>Runge-Kutta method</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -335,6 +372,9 @@
                 <family>Arial</family>
                </font>
               </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
               <property name="maximum">
                <number>2147483647</number>
               </property>
@@ -365,6 +405,7 @@
             </property>
             <property name="font">
              <font>
+              <family>Arial</family>
               <pointsize>10</pointsize>
              </font>
             </property>
@@ -383,6 +424,9 @@
             <property name="text">
              <string>Euler's method LTE</string>
             </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item>
@@ -395,6 +439,9 @@
             <property name="text">
              <string>Improved Euler’s method LTE</string>
             </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item>
@@ -406,6 +453,9 @@
             </property>
             <property name="text">
              <string>Runge-Kutta method LTE</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -539,6 +589,9 @@
                 <family>Arial</family>
                </font>
               </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
               <property name="maximum">
                <number>2147483647</number>
               </property>
@@ -588,8 +641,17 @@
                 <family>Arial</family>
                </font>
               </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
               <property name="maximum">
                <number>2147483647</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
               </property>
              </widget>
             </item>
@@ -612,6 +674,7 @@
            <widget class="QLabel" name="gte_label">
             <property name="font">
              <font>
+              <family>Arial</family>
               <pointsize>10</pointsize>
              </font>
             </property>
@@ -621,7 +684,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="gte_checkBox_1">
+           <widget class="QCheckBox" name="gte_checkBox_euler">
             <property name="font">
              <font>
               <family>Arial</family>
@@ -630,10 +693,13 @@
             <property name="text">
              <string>Euler's method global error</string>
             </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="gte_checkBox_2">
+           <widget class="QCheckBox" name="gte_checkBox_improved_euler">
             <property name="font">
              <font>
               <family>Arial</family>
@@ -642,10 +708,13 @@
             <property name="text">
              <string>Improved Euler’s method global error</string>
             </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="gte_checkBox_3">
+           <widget class="QCheckBox" name="gte_checkBox_runge_kutta">
             <property name="font">
              <font>
               <family>Arial</family>
@@ -653,6 +722,9 @@
             </property>
             <property name="text">
              <string>Runge-Kutta method global error</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -697,6 +769,18 @@
             <property name="text">
              <string>Plot</string>
             </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+            <property name="default">
+             <bool>false</bool>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
            </widget>
           </item>
          </layout>
@@ -712,7 +796,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>946</width>
      <height>21</height>
     </rect>
    </property>
@@ -727,5 +811,70 @@
   </customwidget>
  </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>autoupd_checkbox_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>autoupd_checkbox_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>823</x>
+     <y>564</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>823</x>
+     <y>564</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>autoupd_checkbox_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>autoupd_checkbox_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>823</x>
+     <y>564</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>823</x>
+     <y>564</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ivalue_spinBox_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ivalue_spinBox_5</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>877</x>
+     <y>345</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>877</x>
+     <y>94</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ivalue_spinBox_5</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ivalue_spinBox_4</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>877</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>877</x>
+     <y>345</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

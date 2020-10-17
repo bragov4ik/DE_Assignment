@@ -13,7 +13,7 @@
  * as all numerical methods used in this assignment work in a similar way.
  */
 
-class numerical_method
+class NumericalMethod
 {
 protected:
     /*!
@@ -27,7 +27,7 @@ protected:
      * \param h         Step size for approximation
      * \return          Approximated y at point \c{x = x_prev+h}
      */
-    virtual double approximate_next_y(double x_prev, double y_prev, double h, double (*f)(double, double)) = 0;
+    virtual double approximate_next_y(double x_prev, double y_prev, double h, double (*f)(double, double)) const = 0;
 
     double (*f)(double, double);
     double (*y_exact)(double, double, double);
@@ -49,7 +49,7 @@ public:
      * \param y_0   Initial value of y at point x_0
      * \param N     Number of steps for approximation
      */
-    numerical_method(double (*f)(double, double), double (*y_exact)(double, double, double), double x_0, double X, double y_0, unsigned int N);
+    NumericalMethod(double (*f)(double, double), double (*y_exact)(double, double, double), double x_0, double X, double y_0, unsigned int N);
 
     /*!
      * \brief approximate Approximates differential equation
@@ -58,7 +58,7 @@ public:
      *
      * \return      Vector of pairs (x, y) that contains an approximation of given differential equation
      */
-    QVector<QPair<double, double>> approximate();
+    QVector<QPair<double, double>> approximate() const;
 
     /*!
      * \brief get_local_errors Evaluate local truncation errors
@@ -67,7 +67,7 @@ public:
      *
      * \return      Vector of pairs (x, e) that contains LTE at each step of approximation
      */
-    QVector<QPair<double, double>> get_local_errors();
+    QVector<QPair<double, double>> get_local_errors() const;
 
     /*!
      * \brief get_global_errors Evaluate global truncation errors (GTE)
@@ -76,7 +76,7 @@ public:
      *
      * \return      Vector of pairs (x, e) that contains GTE at each step of approximation
      */
-    QVector<QPair<double, double>> get_global_errors();
+    QVector<QPair<double, double>> get_global_errors() const;
 
     void set_derivative(double (*f)(double, double));
     void set_exact(double (*y_exact)(double, double, double));
