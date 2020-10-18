@@ -58,7 +58,7 @@ public:
      *
      * \return      Vector of pairs (x, y) that contains an approximation of given differential equation
      */
-    QVector<QPair<double, double>> approximate() const;
+    QVector<QPointF> approximate() const;
 
     /*!
      * \brief get_local_errors Evaluate local truncation errors
@@ -67,16 +67,38 @@ public:
      *
      * \return      Vector of pairs (x, e) that contains LTE at each step of approximation
      */
-    QVector<QPair<double, double>> get_local_errors() const;
+    QVector<QPointF> get_local_errors() const;
 
     /*!
-     * \brief get_global_errors Evaluate global truncation errors (GTE)
+     * \brief get_max_global_errors Evaluate max global errors
      *
-     * Constructs vector of pairs (x, e) based on initial values given before
+     * Constructs vector of pairs (n, e_max) based on initial values given before, where
+     * n - steps count, e_max - maximum error with specified parameters and steps count n.
+     * The vector interval is [n_0;N].
+     * Even though the method isn't constant, the values can change only inside the function;
+     * After the execution, state of instance is restored.
      *
-     * \return      Vector of pairs (x, e) that contains GTE at each step of approximation
+     * \return      Vector of pairs (n, e_max) that contains max GTE at each step count
      */
-    QVector<QPair<double, double>> get_global_errors() const;
+    QVector<QPointF> get_max_global_errors(unsigned int n_0);
+
+    /*!
+     * \brief get_max_global_error Evaluate maximum global truncation error (GTE)
+     *
+     * Finds maximum GTE with given initial parameters at given interval and returns it
+     *
+     * \return      maximum GTE on (x_0, X) with given parameters
+     */
+    double get_max_global_error() const;
+
+    /*!
+     * \brief get_exact Evaluate exact function
+     *
+     *
+     *
+     * \return      Vector of pairs (x, y) that contains exact value at each step
+     */
+    QVector<QPointF> get_exact() const;
 
     void set_derivative(double (*f)(double, double));
     void set_exact(double (*y_exact)(double, double, double));

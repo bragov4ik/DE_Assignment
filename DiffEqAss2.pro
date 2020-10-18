@@ -1,4 +1,4 @@
-QT       += core gui
+QT += core gui
 QT += charts
 RC_ICONS = favicon.ico
 
@@ -19,16 +19,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     eulermethod.cpp \
+    improvedeulermethod.cpp \
     main.cpp \
     mainwindow.cpp \
     model.cpp \
-    numericalmethod.cpp
+    numericalmethod.cpp \
+    rungekuttamethod.cpp
 
 HEADERS += \
     eulermethod.h \
+    improvedeulermethod.h \
     mainwindow.h \
     model.h \
-    numericalmethod.h
+    numericalmethod.h \
+    rungekuttamethod.h
 
 FORMS += \
     mainwindow.ui

@@ -4,6 +4,7 @@
 #include "model.h"
 
 #include <QMainWindow>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,14 +25,6 @@ public slots:
     void on_show_improved_euler_toggled(bool checked);
     void on_show_runge_kutta_toggled(bool checked);
 
-    void on_show_euler_lte_toggled(bool checked);
-    void on_show_improved_euler_lte_toggled(bool checked);
-    void on_show_runge_kutta_lte_toggled(bool checked);
-
-    void on_show_euler_gte_toggled(bool checked);
-    void on_show_improved_euler_gte_toggled(bool checked);
-    void on_show_runge_kutta_gte_toggled(bool checked);
-
     void on_autoupd_checkbox_1_toggled(bool checked);
 
     void on_n_0_value_changed(unsigned int value);
@@ -40,6 +33,8 @@ public slots:
     void on_x_0_value_changed(double value);
     void on_y_0_value_changed(double value);
     void on_X_value_changed(double value);
+
+    void on_plot_pushButton_clicked();
 
 
 private:
