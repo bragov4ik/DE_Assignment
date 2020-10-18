@@ -27,7 +27,6 @@ Model::Model() {
     improved_euler_lte_series = new QLineSeries();
     runge_kutta_lte_series = new QLineSeries();
 
-    lte_chart->legend()->hide();
     lte_chart->createDefaultAxes();
     lte_chart->setTitle(LTE_GRAPH_NAME);
 
@@ -46,7 +45,6 @@ Model::Model() {
     improved_euler_gte_series = new QLineSeries();
     runge_kutta_gte_series = new QLineSeries();
 
-    gte_chart->legend()->hide();
     gte_chart->createDefaultAxes();
     gte_chart->setTitle(GTE_GRAPH_NAME);
 
