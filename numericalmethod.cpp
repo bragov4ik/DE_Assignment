@@ -4,7 +4,6 @@ NumericalMethod::NumericalMethod(double (*f)(double, double), double (*y_exact)(
 
 QVector<QPointF> NumericalMethod::approximate() const{
     QVector<QPointF> result(N+1);
-    // WARNING: may be problems with points not initialized
     result[0].rx() = x_0;
     result[0].ry() = y_0;
     double step = (X - x_0)/N;
@@ -69,7 +68,6 @@ double NumericalMethod::get_max_global_error() const {
 QVector<QPointF> NumericalMethod::get_exact() const
 {
     QVector<QPointF> result(N+1);
-    // WARNING: may be problems with points not initialized
     result[0].rx() = x_0;
     result[0].ry() = y_0;
     double step = (X - x_0)/N;

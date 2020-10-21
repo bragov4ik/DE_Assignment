@@ -19,8 +19,6 @@
 
 #include <QAbstractButton>
 #include <QtCharts>
-// TODO: remove
-#include <QtDebug>
 
 class Model
 {

@@ -220,10 +220,10 @@
                <number>6</number>
               </property>
               <property name="minimum">
-               <double>-9007199254740992.000000000000000</double>
+               <double>-1000000000.000000000000000</double>
               </property>
               <property name="maximum">
-               <double>9007199254740992.000000000000000</double>
+               <double>1000000000.000000000000000</double>
               </property>
               <property name="value">
                <double>1.000000000000000</double>
@@ -272,10 +272,10 @@
                <number>6</number>
               </property>
               <property name="minimum">
-               <double>-9007199254740992.000000000000000</double>
+               <double>-1000000000.000000000000000</double>
               </property>
               <property name="maximum">
-               <double>9007199254740992.000000000000000</double>
+               <double>1000000000.000000000000000</double>
               </property>
               <property name="stepType">
                <enum>QAbstractSpinBox::DefaultStepType</enum>
@@ -327,10 +327,10 @@
                <number>6</number>
               </property>
               <property name="minimum">
-               <double>-9007199254740992.000000000000000</double>
+               <double>-1000000000.000000000000000</double>
               </property>
               <property name="maximum">
-               <double>9007199254740992.000000000000000</double>
+               <double>1000000000.000000000000000</double>
               </property>
               <property name="value">
                <double>10.000000000000000</double>
@@ -385,7 +385,7 @@
                <number>1</number>
               </property>
               <property name="maximum">
-               <number>2147483647</number>
+               <number>10000</number>
               </property>
               <property name="value">
                <number>10</number>
@@ -528,7 +528,7 @@
                <number>1</number>
               </property>
               <property name="maximum">
-               <number>2147483647</number>
+               <number>10000</number>
               </property>
               <property name="value">
                <number>10</number>
@@ -583,7 +583,7 @@
                <number>1</number>
               </property>
               <property name="maximum">
-               <number>2147483647</number>
+               <number>10000</number>
               </property>
               <property name="value">
                <number>1</number>
