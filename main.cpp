@@ -2,8 +2,6 @@
 #include "model.h"
 
 #include <QApplication>
-#include <QtCharts>
-#include <QObject>
 
 using namespace QtCharts;
 

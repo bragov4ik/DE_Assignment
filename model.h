@@ -83,9 +83,35 @@ public:
 
 private:
 
+    /*!
+     * \brief update_line_series updates \c series with values produced by \c producer
+     *
+     * Updates values of \c series, updates its representation int \c chart (if \c show_method is true),
+     * or removes it from the chart (\c{show_method == false}). New values are taken from the output of
+     * \c producer that has to be a member function of \c NumericalMethod class.
+     *
+     * \param MethodClass   numerical method class (Euler, ImprovedEuler, etc.)
+     * \param series        series to update
+     * \param producer      member function of NumericalMethod class that gives new values
+     * \param chart         chart in which the series should be updated
+     * \param show_method   should the series be represented in the chart
+     */
     template<class MethodClass>
     void update_line_series(QLineSeries *series, QVector<QPointF> (NumericalMethod::*producer)(void) const, QChart* chart, bool show_method);
 
+    /*!
+     * \brief update_line_series updates \c series with values produced by \c producer with (uint) parameter (for global errors)
+     *
+     * Updates values of \c series, updates its representation int \c chart (if \c show_method is true),
+     * or removes it from the chart (\c{show_method == false}). New values are taken from the output of
+     * \c producer that has to be a member function of \c NumericalMethod class.
+     *
+     * \param MethodClass   numerical method class (Euler, ImprovedEuler, etc.)
+     * \param series        series to update
+     * \param producer      member function of NumericalMethod class that gives new values (of global errors)
+     * \param chart         chart in which the series should be updated
+     * \param show_method   should the series be represented in the chart
+     */
     template<class MethodClass>
     void update_line_series(QLineSeries *series, QVector<QPointF> (NumericalMethod::*producer)(unsigned int), QChart* chart, bool show_method);
 
