@@ -111,6 +111,9 @@ void Model::set_auto_update_graph(bool value)
 void Model::set_n_0(unsigned int value)
 {
     n_0 = value;
+    if (n_0 > N) {
+        N = n_0;
+    }
     if (auto_update_graph) {
         update_gte_graph();
     }
@@ -119,6 +122,9 @@ void Model::set_n_0(unsigned int value)
 void Model::set_N(unsigned int value)
 {
     N = value;
+    if (n_0 > N) {
+        n_0 = N;
+    }
     if (auto_update_graph) {
         update_all_graphs();
     }
