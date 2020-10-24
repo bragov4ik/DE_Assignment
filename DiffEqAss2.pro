@@ -1,6 +1,6 @@
 QT += core gui
 QT += charts
-RC_ICONS = favicon.ico
+RC_ICONS = "favicon.ico"
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
