@@ -3,7 +3,7 @@
 
 // derivative function in c++ syntax in terms of x and y variables
 // I put ridiculously big number as when x approaches 0 the derivative goes to infty
-#define DERIVATIVE (x==0 ? 9000000000000000 : (2*x*x*x+2*y/x))
+#define DERIVATIVE (2*x*x*x+2*y/x)
 
 // exact solution function in c++ syntax in terms of y, x_0, and y_0 variables
 #define EXACT (x*x*(x*x + y_0/(x_0*x_0) - x_0*x_0))

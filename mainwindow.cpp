@@ -118,12 +118,20 @@ void MainWindow::on_y_0_value_changed(double value)
 
 void MainWindow::on_X_value_changed(double value)
 {
-    model.set_X(value);
+    if (value == 0) {
+        QMessageBox::critical(
+                    this,
+                    "Error!",
+                    "Division by 0: X cannot be 0!");
+    }
+    else {
+        model.set_X(value);
 
-    // we want to keep the x_0 value <= X
-    double x_0 = ui->ivalue_doubleSpinBox_1->value();
-    if (x_0 > value) {
-        ui->ivalue_doubleSpinBox_1->setValue(value);
+        // we want to keep the x_0 value <= X
+        double x_0 = ui->ivalue_doubleSpinBox_1->value();
+        if (x_0 > value) {
+            ui->ivalue_doubleSpinBox_1->setValue(value);
+        }
     }
 }
 
